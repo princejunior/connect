@@ -1,0 +1,16 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^14.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elijah Elliott",
+  "license": "ISC"
+}

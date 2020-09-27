@@ -5,14 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Page App</title>
     <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="stylesheet" href="./static/css/login.css" />
   </head>
   <body>
     <nav class="nav">
-      <a href="/" class="nav-link" data-link>Dashboard</a>
-      <a href="/posts" class="nav-link" data-link>Posts</a>
-      <a href="/settings" class="nav-link" data-link>Setting</a>
+      <div class="nav-container">
+        <a href="/" class="nav-link" data-link>Dashboard</a>
+      </div>
+      <div class="nav-container">
+        <a href="/posts" class="nav-link" data-link>Posts</a>
+      </div>
+      <div class="nav-container">
+        <a href="/settings" class="nav-link" data-link>Setting</a>
+      </div>
+      <div class="nav-container">
+        <a href="/login" class="nav-link" data-link>Login</a>
+      </div>
+      <div class="nav-container">
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+      </div>
     </nav>
     <div id="app"></div>
+    <div id="nav-bottom">
+      <div id="nav-bottom-icon">
+        <a href="/profile" class="nav-link" data-link>
+          <img src="./static/photos/account_circle.png" />
+        </a>
+      </div>
+      <div id="nav-bottom-icon">
+        <a href="/" class="nav-link" data-link>
+          <img src="./static/photos/shopping_basket.png" />
+        </a>
+      </div>
+      <div id="nav-bottom-icon"></div>
+      <div id="nav-bottom-icon"></div>
+    </div>
     <script type="module" src="/static/js/index.js"></script>
   </body>
 </html>

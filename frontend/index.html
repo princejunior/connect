@@ -6,30 +6,48 @@
     <title>Single Page App</title>
     <link rel="stylesheet" href="./static/css/index.css" />
     <link rel="stylesheet" href="./static/css/login.css" />
+    <link rel="stylesheet" href="./static/css/home.css" />
   </head>
   <body>
-    <nav class="nav">
+    <div class="nav">
+      <div class="nav-container"><img src="./static/photos/lwLogo2.png" /></div>
       <div class="nav-container">
-        <a href="/" class="nav-link" data-link>Dashboard</a>
+        <input id="search" class="search" />
       </div>
-      <div class="nav-container">
-        <a href="/posts" class="nav-link" data-link>Posts</a>
-      </div>
-      <div class="nav-container">
+      <!-- <div class="nav-container">
         <a href="/settings" class="nav-link" data-link>Setting</a>
-      </div>
+      </div> -->
       <div class="nav-container">
         <a href="/login" class="nav-link" data-link>Login</a>
       </div>
-      <div class="nav-container">
+      <div class="nav-container-right" onclick="openMenu()">
         <div class="menu"></div>
         <div class="menu"></div>
         <div class="menu"></div>
       </div>
-    </nav>
+    </div>
+
     <div id="app"></div>
+
     <div id="nav-bottom">
-      <div id="nav-bottom-icon">
+      <ul id="nav-bottom-icons">
+        <li id="nav-bottom-icon">
+          <a href="/" class="nav-link" data-link>
+            <img src="./static/photos/home.png" />
+          </a>
+        </li>
+        <li id="nav-bottom-icon">
+          <a href="/profile" class="nav-link" data-link>
+            <img src="./static/photos/account_circle.png" />
+          </a>
+        </li>
+        <li id="nav-bottom-icon">
+          <a href="/" class="nav-link" data-link>
+            <img src="./static/photos/shopping_basket.png" />
+          </a>
+        </li>
+      </ul>
+      <!-- <div id="nav-bottom-icon">
         <a href="/profile" class="nav-link" data-link>
           <img src="./static/photos/account_circle.png" />
         </a>
@@ -40,8 +58,13 @@
         </a>
       </div>
       <div id="nav-bottom-icon"></div>
-      <div id="nav-bottom-icon"></div>
+      <div id="nav-bottom-icon"></div> -->
     </div>
     <script type="module" src="/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/js/javascript/home.js"></script>
+    <script
+      type="text/javascript"
+      src="/static/js/javascript/login.js"
+    ></script>
   </body>
 </html>

@@ -1,15 +1,5 @@
 import AbstractView from '../AbstractView.js';
 
-function getValues(id) {
-  return document.getElementById(id).value;
-}
-
-function login() {
-  const email = getValues('email');
-  const password = getValues('password');
-  //   console.log(email);
-  //   console.log(password);
-}
 export default class extends AbstractView {
   constructor() {
     super();
@@ -18,11 +8,11 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-    <div class='login'>
+    <div id='login' class='login'>
         <img class='login-logo' src='./static/photos/lwLogo.png' alt='' />
-      <div class='login-container'>
+      <div id='login-container'class='login-container'>
         <h1>Sign in</h1>
-        <form>
+        <div>
           <h5>E-mail</h5>
           <input
           id='email'
@@ -34,19 +24,56 @@ export default class extends AbstractView {
             type='password'
             name='password'
           />
-          <button onClick=${login} class='login-sign-in-button'>
+          <button onClick='login()' class='login-sign-in-button'>
             Sign In
+          </button>
+        </div>
+        <p>
+          By creating an account, you agree to Live W.O.W.s Conditions of use
+          and Privacy Notice
+        </p>
+        <button onClick='changeForm(0)' class='login-register-button'>
+          Create your Live W.O.W. account
+        </button>
+      </div>
+
+       <div id='register-container' class='register-container'>
+        <h1>Sign in</h1>
+        <form>
+          <h5>First Name</h5>
+
+          <input
+            type='text'
+          />
+          <h5>Last Name</h5>
+
+          <input
+            
+            type='text'
+          />
+          <h5>E-mail</h5>
+
+          <input
+            
+            type='text'
+          />
+          <h5>Password</h5>
+
+          <input
+            type='password'
+            name='password'
+            
+          />
+          <button onClick='register()' class='login-register-button'>
+            Create your Live W.O.W. account
           </button>
         </form>
         <p>
           By creating an account, you agree to Live W.O.W.s Conditions of use
           and Privacy Notice
         </p>
-        <button onClick={register} className='login-register-button'>
-          Create your Live W.O.W. account
-        </button>
       </div>
-
+    </div> 
       
     `;
   }

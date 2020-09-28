@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Page App</title>
     <link rel="stylesheet" href="./static/css/index.css" />
     <link rel="stylesheet" href="./static/css/login.css" />
     <link rel="stylesheet" href="./static/css/home.css" />
   </head>
   <body>
     <div class="nav">
-      <div class="nav-container"><img src="./static/photos/lwLogo2.png" /></div>
       <div class="nav-container">
-        <input id="search" class="search" />
+        <a href="/" class="nav-link" data-link>
+          <img src="./static/photos/lwLogo2.png" />
+        </a>
       </div>
-      <!-- <div class="nav-container">
-        <a href="/settings" class="nav-link" data-link>Setting</a>
-      </div> -->
+      <div class="nav-container" style="display: flex">
+        <input id="search" class="search" />
+        <img src="./static/photos/search.png" />
+      </div>
       <div class="nav-container">
         <a href="/login" class="nav-link" data-link>Login</a>
       </div>
@@ -26,9 +27,12 @@
         <div class="menu"></div>
       </div>
     </div>
-
+    <ul id="menu-tab">
+      <li id="menu-tab-items">
+        <a href="/settings" class="nav-link" data-link>Setting</a>
+      </li>
+    </ul>
     <div id="app"></div>
-
     <div id="nav-bottom">
       <ul id="nav-bottom-icons">
         <li id="nav-bottom-icon">
@@ -61,6 +65,10 @@
       <div id="nav-bottom-icon"></div> -->
     </div>
     <script type="module" src="/static/js/index.js"></script>
+    <script
+      type="text/javascript"
+      src="/static/js/javascript/index.js"
+    ></script>
     <script type="text/javascript" src="/static/js/javascript/home.js"></script>
     <script
       type="text/javascript"
